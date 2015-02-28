@@ -23,7 +23,7 @@
     <property name="aws-ant-tasks-version" value="0.5-SNAPSHOT" />
     <property name="AWS_ACCESS_KEY" value="${env.AWS_ACCESS_KEY}"/>
     <property name="AWS_SECRET_KEY" value="${env.AWS_SECRET_KEY}"/>
-    <property name="AWS_S3_BUCKET" value="pesp-opencms"/>
+    <property name="AWS_S3_BUCKET" value="pesp-opencms-archives"/>
 
 	<path id="buildpath">
 		<fileset dir="${basedir}/cms-portal-services/lib">
@@ -118,7 +118,7 @@
         <!-- create the dist zip file -->
         <zip destfile="${build.dir}/cms-portal-services.zip" basedir="${distaws.dir}"></zip>
         <!-- upload the dist zip to aws s3 bucket -->
-        <s3put endpoint="s3.amazonaws.com" key="${AWS_ACCESS_KEY}" secret="${AWS_SECRET_KEY}" bucket="${AWS_S3_BUCKET}" dest="archives/dist">
+        <s3put endpoint="s3.amazonaws.com" key="${AWS_ACCESS_KEY}" secret="${AWS_SECRET_KEY}" bucket="${AWS_S3_BUCKET}" dest="dist">
             <fileset dir="${build.dir}">
                 <include name="cms-portal-services.zip" />
             </fileset>
