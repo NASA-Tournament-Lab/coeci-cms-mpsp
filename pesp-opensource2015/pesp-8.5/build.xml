@@ -116,11 +116,11 @@
             </fileset>
         </copy>
         <!-- create the dist zip file -->
-        <zip destfile="${build.dir}/cmp-portal-services.zip" basedir="${distaws.dir}"></zip>
+        <zip destfile="${build.dir}/cms-portal-services.zip" basedir="${distaws.dir}"></zip>
         <!-- upload the dist zip to aws s3 bucket -->
         <s3put endpoint="s3.amazonaws.com" key="${AWS_ACCESS_KEY}" secret="${AWS_SECRET_KEY}" bucket="${AWS_S3_BUCKET}" dest="archives/dist">
             <fileset dir="${build.dir}">
-                <include name="cmp-portal-services.zip" />
+                <include name="cms-portal-services.zip" />
             </fileset>
         </s3put>
         <!-- clean after building -->
