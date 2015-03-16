@@ -1890,7 +1890,17 @@ public class ProviderEnrollmentServiceBean extends BaseService implements Provid
             query.setParameter("requestTypes", criteria.getRequestTypes());
         }
         if (Util.isNotEmpty(criteria.getStatuses())) {
-            query.setParameter("enrollmentStatuses", criteria.getStatuses());
+            String statuses = "";
+            for(String status : criteria.getStatuses()) {
+                statuses = statuses + "," + status;
+            }
+            if(statuses.startsWith(",")) {
+                statuses = statuses.substring(1);
+            }
+            if(statuses.endsWith(",")) {
+                statuses = statuses.substring(0, statuses.length() -1);
+            }
+            query.setParameter("enrollmentStatuses", criteria.getStatuses().get(0));
         }
         if (criteria.getSubmissionDateStart() != null) {
             query.setParameter("submissionDateStart", criteria.getSubmissionDateStart());

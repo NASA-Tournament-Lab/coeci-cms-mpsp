@@ -292,9 +292,14 @@ $(document).ready(function() {
 		if($(this).attr('checked')){
 			$('#contactName').val('').addClass("disabled").prop('disabled', true);
 			$('#contactEmail').val('').addClass("disabled").prop('disabled', true);
+			// Bug Fix 1
+			$('#contactName').val($('#firstName').val());
+			$('#contactEmail').val($('#emailAddress').val());
 		}else{
 			$('#contactName').val('').removeClass("disabled").prop('disabled', false);
-			$('#contactEmail').val('').removeClass("disabled").prop('disabled', false);	
+			$('#contactEmail').val('').removeClass("disabled").prop('disabled', false);
+			$('#contactName').val('');
+			$('#contactEmail').val('');
 		}										
 	});
 	

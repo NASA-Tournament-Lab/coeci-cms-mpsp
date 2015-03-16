@@ -48,7 +48,7 @@
     </bean>
     		
     <bean id="simpleUrlAuthenticationFailureHandler" class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
-        <constructor-arg value="/login"></constructor-arg>
+        <constructor-arg value="/login?error=Invalid Username/password"></constructor-arg>
     </bean>		
 		
 	<bean id="authenticationProcessingFilterEntryPoint" class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">

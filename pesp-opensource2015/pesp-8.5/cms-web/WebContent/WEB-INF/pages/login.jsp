@@ -24,9 +24,9 @@
                     <form id="loginForm" action="<c:url value='j_spring_security_check'/>" method="post">
 						<div class="loginPanel">
                             <%@include file="/WEB-INF/pages/includes/flash.jsp" %>
-                            
-                            <c:if test="${not empty SPRING_SECURITY_LAST_EXCEPTION.message}">
-								<div class="errorInfo" style="display: block;">
+                            <% String error = request.getParameter("error"); %>
+                            <c:if test="${error == null && SPRING_SECURITY_LAST_EXCEPTION != null}">
+                                <div class="errorInfo" style="display: block;">
 									<h3>${SPRING_SECURITY_LAST_EXCEPTION.message}</h3>
 									<div class="tl"></div>
 									<div class="tr"></div>
@@ -35,7 +35,15 @@
 								</div>
 								<% session.removeAttribute(WebAttributes.AUTHENTICATION_EXCEPTION); %>
                             </c:if>
-						
+                            <% if(error !=null) { %>
+                                <div class="errorInfo" style="display: block;">
+									<h3><% out.write(error); %></h3>
+									<div class="tl"></div>
+									<div class="tr"></div>
+									<div class="bl"></div>
+									<div class="br"></div>
+								</div>
+                            <% } %>
 							<div class="row">
 								<label class="label">Username:</label>
 								<input type="text" name="j_username" class="text" id="username" value="${SPRING_SECURITY_LAST_USERNAME}" maxlength="50"/>

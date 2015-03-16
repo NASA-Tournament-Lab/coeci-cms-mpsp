@@ -18,6 +18,7 @@ package gov.medicaid.services.impl;
 import gov.medicaid.domain.rules.GlobalLookups;
 import gov.medicaid.entities.AgreementDocument;
 import gov.medicaid.entities.AgreementDocumentSearchCriteria;
+import gov.medicaid.entities.AgreementDocumentType;
 import gov.medicaid.entities.SearchResult;
 import gov.medicaid.services.AgreementDocumentService;
 import gov.medicaid.services.EntityNotFoundException;
@@ -220,10 +221,15 @@ public class HibernateAgreementDocumentBean extends BaseService implements Agree
                 entityCountQueryString.append("AND title LIKE :title ");
                 parameters.put("title", criteria.getTitle());
             }
-
             if (criteria.getType() != null) {
+                String type = null;
+                if(criteria.getType() == AgreementDocumentType.AGREEMENT) {
+                    type = "01";
+                } else {
+                    type = "02";
+                }
                 entityCountQueryString.append("AND type = :type ");
-                parameters.put("type", criteria.getType().name());
+                parameters.put("type", type);
             }
 
             // Get count

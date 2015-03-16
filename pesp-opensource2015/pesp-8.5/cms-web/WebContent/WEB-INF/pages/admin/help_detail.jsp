@@ -25,6 +25,8 @@
                     </div>
                     <div class="head">
                         <h1 class="text"><c:out value="${helpItem.title}"/></h1>
+                        <!-- added the edit help item link -->
+                        <a href="${ctx}/admin/editHelpItem?helpItemId=${helpItem.id}" class="editHelpTopicBtn purpleBtn"><span class="btR"><span class="btM">Edit</span></span></a>
                     </div>
                     <div class="clearFixed"></div>
                     <div class="helpContent">

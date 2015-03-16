@@ -240,7 +240,7 @@ public class HelpController extends BaseServiceAdminController {
             helpService.update(helpItem);
             helpItem = helpService.get(helpItem.getId());
 
-            ModelAndView model = new ModelAndView("service_admin_view_help_item");
+            ModelAndView model = new ModelAndView("admin/service_admin_view_help_item");
             model.addObject("helpItem", helpItem);
 
             return LogUtil.traceExit(getLog(), signature, model);
