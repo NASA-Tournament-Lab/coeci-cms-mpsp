@@ -292,7 +292,6 @@ $(document).ready(function() {
 		if($(this).attr('checked')){
 			$('#contactName').val('').addClass("disabled").prop('disabled', true);
 			$('#contactEmail').val('').addClass("disabled").prop('disabled', true);
-			// Bug Fix 1
 			$('#contactName').val($('#firstName').val());
 			$('#contactEmail').val($('#emailAddress').val());
 		}else{

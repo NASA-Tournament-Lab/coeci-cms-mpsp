@@ -35,7 +35,7 @@
 								</div>
 								<% session.removeAttribute(WebAttributes.AUTHENTICATION_EXCEPTION); %>
                             </c:if>
-                            <% if(error !=null) { %>
+                            <% if(error != null) { %>
                                 <div class="errorInfo" style="display: block;">
 									<h3><% out.write(error); %></h3>
 									<div class="tl"></div>

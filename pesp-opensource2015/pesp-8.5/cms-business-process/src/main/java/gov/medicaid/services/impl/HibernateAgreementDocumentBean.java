@@ -223,7 +223,7 @@ public class HibernateAgreementDocumentBean extends BaseService implements Agree
             }
             if (criteria.getType() != null) {
                 String type = null;
-                if(criteria.getType() == AgreementDocumentType.AGREEMENT) {
+                if (criteria.getType() == AgreementDocumentType.AGREEMENT) {
                     type = "01";
                 } else {
                     type = "02";
