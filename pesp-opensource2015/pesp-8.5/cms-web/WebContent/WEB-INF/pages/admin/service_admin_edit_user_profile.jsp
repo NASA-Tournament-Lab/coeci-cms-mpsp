@@ -94,7 +94,7 @@
             <!-- /#mainContent -->
 
             <div id="footer">
-                <strong>Copyright 2015.</strong> Republic Systems Inc. -- Provider Management & Fraud Protection Application
+                <strong>Copyright 2015.</strong> Republic Systems Inc.
             </div>
             <!-- #footer -->
         </div>
