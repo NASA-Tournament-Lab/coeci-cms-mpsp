@@ -17,7 +17,7 @@
             <div id="mainContent" class="detailPage providerReadOnly">
                 <div class="contentWidth">
                     <div class="mainNav">
-                        <a class="logo" href="javascript:;"><img src="<c:url value="/i/logo.gif" />" alt="Medicaid Provider"/></a>
+                        <a class="logo" href="/cms/landing"><img src="<c:url value="/i/logo.gif" />" alt="Medicaid Provider"/></a>
                         <c:set var="activeTab" value="2"></c:set>
                         <%@include file="/WEB-INF/pages/includes/nav.jsp" %>
                     </div>
