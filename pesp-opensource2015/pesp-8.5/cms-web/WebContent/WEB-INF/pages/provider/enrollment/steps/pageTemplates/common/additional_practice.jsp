@@ -47,7 +47,8 @@
 	            <td>${requestScope[formName]}</td>
                 <c:set var="formName" value="_07_zip_${status.index - 1}"></c:set>
 	            <td>${requestScope[formName]}</td>
-                <c:set var="formName" value="_07_county_${status.index - 1}"></c:set>
+                <c:set var="county" value="${requestScope['_05_county']}" /><c:if test="${not empty county}">,</c:if>${county} 
+                <!-- <c:set var="formName" value="_07_county_${status.index - 1}"></c:set> -->
 	            <td>${requestScope[formName]}</td>
 	        </tr>
 	    </c:forEach>

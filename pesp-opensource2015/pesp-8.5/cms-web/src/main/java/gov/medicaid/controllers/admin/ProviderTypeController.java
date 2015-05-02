@@ -122,6 +122,7 @@ public class ProviderTypeController extends BaseServiceAdminController {
             criteria.setPageNumber(1);
             criteria.setPageSize(10);
             criteria.setSortColumn("description");
+            criteria.setAscending(true);
 
             SearchResult<ProviderType> result = providerTypeService.search(criteria);
             ModelAndView model = new ModelAndView("admin/service_admin_provider_types");

@@ -15,7 +15,7 @@
             <!-- /#mainContent -->
 
             <div id="footer">
-                <strong>Copyright <fmt:formatDate value="${date}" pattern="yyyy" />.</strong> Companyname Lorem Ipsum
+                <strong>Copyright <fmt:formatDate value="${date}" pattern="yyyy" />.</strong> Republic Systems Inc. -- Provider Management & Fraud Protection Application
             </div>
             <!-- #footer -->
             <div class="clear"></div>

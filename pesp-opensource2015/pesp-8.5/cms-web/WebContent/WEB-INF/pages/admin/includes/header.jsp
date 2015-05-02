@@ -50,7 +50,7 @@
             <div id="mainContent" <c:if test='${isUpdateUser}'>class="detailPage"</c:if>>
                 <div class="contentWidth">
                     <div class="mainNav">
-                        <a class="logo" href="javascript:;"><img src="${ctx}/i/logo.gif" alt="Medicaid Provider"/></a>
+                        <a class="logo" href="/cms/landing"><img src="${ctx}/i/logo.gif" alt="Medicaid Provider"/></a>
                         <div class="nav">
                             <div class="navR">
                                 <div class="navM">

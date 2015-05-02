@@ -30,7 +30,7 @@
                             <div class="section" id="updateProfile">
                                 <div class="wholeCol">
                                     <h3>Welcome <c:out value="${account.username}" />!</h3>
-                                    <p>You have been successfully registered to APPNAME.</p>
+                                    <p>You have been successfully registered to Republic Systems Inc. -- Provider Management & Fraud Protection Application</p>
                                     <p>
                                         We have sent a confirmation email to <i><c:out value="${account.email}" /></i> with your login information.
                                         If you do not receive the email within a reasonable amount of time, please <a href="#">contact us</a> and we

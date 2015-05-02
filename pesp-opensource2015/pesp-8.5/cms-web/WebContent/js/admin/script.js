@@ -776,7 +776,7 @@ $(document).ready(function() {
 	//Save As Above
 	$('#sameAsAbove').live('click',function(){
 		if($(this).attr('checked')){
-			var name = $('#firstName').val() + ' ' + $('#middleName').val() + ' ' + $('#lastName').val();
+			var name = $('#firstName').val() + ' ' + $('#lastName').val();
 			$('#contactName').val(name.replace(/(^\s*)/g, ""));
 			$('#contactEmail').val($('#emailAddress').val());
 			$('#contactEmail').val($('#emailAddress').val());

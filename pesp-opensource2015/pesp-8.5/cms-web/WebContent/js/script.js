@@ -687,17 +687,27 @@ $(document).ready(function() {
 	//Same As Above
 	$('.reimbursementAddressRow .checkbox').live('click',function(){
 		if($(this).attr('checked')){
-			$(this).parents('.reimbursementAddressRow').find('.addressInput').val('').addClass("disabled").prop('disabled', true);
-			$(this).parents('.reimbursementAddressRow').find('.cityInput').val('').addClass("disabled").prop('disabled', true);
-			$(this).parents('.reimbursementAddressRow').find('.stateSelect').val('').addClass("disabled").prop('disabled', true);
-			$(this).parents('.reimbursementAddressRow').find('.zipInput').val('').addClass("disabled").prop('disabled', true);
-			$(this).parents('.reimbursementAddressRow').find('.countryInput').val('').addClass("disabled").prop('disabled', true);
+			$(this).parents('.reimbursementAddressRow').find('.addressInput').addClass("disabled").prop('disabled', true);
+			$(this).parents('.reimbursementAddressRow').find('.cityInput').addClass("disabled").prop('disabled', true);
+			$(this).parents('.reimbursementAddressRow').find('.stateSelect').addClass("disabled").prop('disabled', true);
+			$(this).parents('.reimbursementAddressRow').find('.zipInput').addClass("disabled").prop('disabled', true);
+			$(this).parents('.reimbursementAddressRow').find('.countryInput').addClass("disabled").prop('disabled', true);
+			$(this).parents('.reimbursementAddressRow').find('.addressline1 .normalInput').val($(this).parents('.wholeCol').find('.addressline1 .normalInput').val());
+			$(this).parents('.reimbursementAddressRow').find('.addressline2 .normalInput').val($(this).parents('.wholeCol').find('.addressline2 .normalInput').val());
+			$(this).parents('.reimbursementAddressRow').find('.cityInput').val($(this).parents('.wholeCol').find('.cityInputFor').val());
+			$(this).parents('.reimbursementAddressRow').find('.stateSelect').val($(this).parents('.wholeCol').find('.stateSelectFor').val());
+			$(this).parents('.reimbursementAddressRow').find('.zipInput').val($(this).parents('.wholeCol').find('.zipInputFor').val());
 		}else{
 			$(this).parents('.reimbursementAddressRow').find('.addressInput').val('').removeClass("disabled").prop('disabled', false);
 			$(this).parents('.reimbursementAddressRow').find('.cityInput').val('').removeClass("disabled").prop('disabled', false);
 			$(this).parents('.reimbursementAddressRow').find('.stateSelect').val('').removeClass("disabled").prop('disabled', false);
 			$(this).parents('.reimbursementAddressRow').find('.zipInput').val('').removeClass("disabled").prop('disabled', false);
 			$(this).parents('.reimbursementAddressRow').find('.countryInput').val('').removeClass("disabled").prop('disabled', false);	
+			$(this).parents('.reimbursementAddressRow').find('.addressline1').val('');
+			$(this).parents('.reimbursementAddressRow').find('.addressline2').val('');
+			$(this).parents('.reimbursementAddressRow').find('.cityInput').val('');
+			$(this).parents('.reimbursementAddressRow').find('.stateSelect').val('Please select');
+			$(this).parents('.reimbursementAddressRow').find('.zipInput').val('');
 		}													  
 	});
 	

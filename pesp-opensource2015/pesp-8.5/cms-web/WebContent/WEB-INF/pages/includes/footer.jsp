@@ -5,6 +5,6 @@
     @version 1.0
  --%>
 <div id="footer">
-    <strong>Copyright 2015.</strong> Companyname Lorem Ipsum
+    <strong>Copyright 2015.</strong> Replublic Systems Inc. Provider Management & Fraud Protection Application
 </div>
 <!-- #footer -->
