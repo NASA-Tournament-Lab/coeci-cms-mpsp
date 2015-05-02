@@ -23,7 +23,6 @@
 		<c:set var="city" value="${requestScope['_05_city']}" /><c:out value="${city}" /> 
 		<c:set var="state" value="${requestScope['_05_state']}" /><c:if test="${not empty state}">,</c:if>${state}
 		<c:set var="zip" value="${requestScope['_05_zip']}" /><c:if test="${not empty zip}">,</c:if>${zip} 
-		<c:set var="county" value="${requestScope['_05_county']}" /><c:if test="${not empty county}">,</c:if>${county} 
     </span>
 </div>
 <div class="row">
