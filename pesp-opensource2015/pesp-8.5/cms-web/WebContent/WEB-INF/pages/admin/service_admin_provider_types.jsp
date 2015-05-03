@@ -124,7 +124,7 @@
                                                         <c:forEach var="item" items="${searchResult.items}">
                                                             <tr>
                                                                 <td class="alignCenter">
-                                                                    <input <c:if test="${!item.canDelete}">disabled="disabled"</c:if> class="providerTypeCheckBox" value="${item.code}" type="checkbox" name="providerType"/>
+                                                                    <input class="providerTypeCheckBox" value="${item.code}" type="checkbox" name="providerType"/>
                                                                 </td>
                                                                 <td>${item.description}</td>
                                                                 <td class="alignCenter"><a href="${ctx}/admin/getProviderType?providerTypeId=${item.code}" class="viewProviderLink">View</a><span class="sep">|</span><a href="${ctx}/admin/beginEditProviderType?providerTypeId=${item.code}" class="editProviderLink">Edit</a>

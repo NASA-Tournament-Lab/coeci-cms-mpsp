@@ -135,6 +135,7 @@
                         <c:choose>
                             <c:when test="${fn:toLowerCase(item.status)=='approved'}"><span class="green">Approved</span></c:when>
                             <c:when test="${fn:toLowerCase(item.status)=='rejected'}"><span class="red">Denied</span></c:when>
+                            <c:when test="${fn:toLowerCase(item.status)=='moderate'}"><span class="orange">Moderate</span></c:when>
                             <c:otherwise>${item.status}</c:otherwise>
                          </c:choose>
                     </td>

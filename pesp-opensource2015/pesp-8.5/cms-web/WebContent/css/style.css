@@ -31,6 +31,9 @@ input,select,textarea{
 .green{
 	color:#5bc217;
 }
+.orange {
+	color: #EE7600 !important;
+}
 .functionTab select.timeSelect{
     width:85px;
 }
