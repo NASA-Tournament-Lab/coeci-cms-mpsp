@@ -41,7 +41,7 @@
                     <th>City<span class="required">*</span><span class="sep"></span></th>
                     <th>State<span class="required">*</span><span class="sep"></span></th>
                     <th>ZIP Code<span class="required">*</span><span class="sep"></span></th>
-                    <th>County<span class="sep"></span></th>
+                    <th>County<span class="required">*</span><span class="sep"></span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -112,7 +112,13 @@
                         <td>
                             <c:set var="formName" value="_07_county_${status.index - 1}"></c:set>
                             <c:set var="formValue" value="${requestScope[formName]}"></c:set>
-                            <input ${disableLinkedFields} type="text" class="smallInput countyMask" name="${formName}" value="${formValue}" maxlength="3"/>
+                            <select ${disableLinkedFields} class="countySelectFor" name="${formName}">
+                                <option value="">Please select</option>
+                                <c:forEach var="opt" items="${requestScope['_99_counties']}">
+                                    <option ${formValue eq opt.code ? 'selected' : ''} value="${opt.code}"><c:out value="${opt.description}" /></option>
+                                </c:forEach>
+                            </select>
+                            <!-- <input ${disableLinkedFields} type="text" class="smallInput countyMask" name="${formName}" value="${formValue}" maxlength="3"/> -->
                         </td>
                         <td class="alignCenter"><a href="javascript:;" class="remove">REMOVE</a></td>
                     </tr>

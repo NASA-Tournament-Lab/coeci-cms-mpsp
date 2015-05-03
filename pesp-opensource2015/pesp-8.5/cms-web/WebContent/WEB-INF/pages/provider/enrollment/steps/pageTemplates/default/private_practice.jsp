@@ -195,7 +195,7 @@
                             <c:set var="formName" value="_05_billingCounty"></c:set>
                             <c:set var="formValue" value="${requestScope[formName]}"></c:set>
                             <label class="smallLabel">County : </label>
-                            <select ${billingAddressMarkup} class="${disableBillingAddress ? 'disabled' : '' } stateSelect" name="${formName}">
+                            <select ${billingAddressMarkup} class="${disableBillingAddress ? 'disabled' : '' } countySelect" name="${formName}">
                                         <option value="">Please select</option>
                                         <c:forEach var="opt" items="${requestScope['_99_counties']}">
                                             <option ${formValue eq opt.code ? 'selected' : ''} value="${opt.code}"><c:out value="${opt.description}" /></option>

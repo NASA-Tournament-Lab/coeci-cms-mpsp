@@ -36,7 +36,7 @@
 	
 		        <c:set var="formName" value="_02_lastName"></c:set>
 		        <c:set var="formValue" value="${requestScope[formName]}"></c:set>
-	            <input type="text" class="normalInput" name="${formName}" value="${formValue}" maxlength="45"/>
+	            <input type="text" class="normalInput" id="lastName" name="${formName}" value="${formValue}" maxlength="45"/>
 	        </div>
 	        <div class="row requireField">
 	        	<%-- BUGR-9673 (optional NPI for some provider types) --%>
