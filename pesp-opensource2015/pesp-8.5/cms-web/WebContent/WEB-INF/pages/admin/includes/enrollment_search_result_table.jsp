@@ -135,7 +135,6 @@
                         <c:choose>
                             <c:when test="${fn:toLowerCase(item.status)=='approved'}"><span class="green">Approved</span></c:when>
                             <c:when test="${fn:toLowerCase(item.status)=='rejected'}"><span class="red">Denied</span></c:when>
-                            <c:when test="${fn:toLowerCase(item.status)=='moderate'}"><span class="orange">Moderate</span></c:when>
                             <c:otherwise>${item.status}</c:otherwise>
                          </c:choose>
                     </td>
@@ -143,6 +142,7 @@
                 <c:choose>
                     <c:when test="${fn:toLowerCase(item.riskLevel)=='limited'}"><td class="green">Low</td></c:when>
                     <c:when test="${fn:toLowerCase(item.riskLevel)=='high'}"><td class="red">High</td></c:when>
+                    <c:when test="${fn:toLowerCase(item.riskLevel)=='moderate'}"><span class="orange">Moderate</span></c:when>
                     <c:otherwise><td>${item.riskLevel}</td></c:otherwise>
                 </c:choose>
                 <td><fmt:formatDate value="${item.statusDate}" pattern="MM/dd/yyyy"/></td>
