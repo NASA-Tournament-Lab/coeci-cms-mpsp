@@ -72,6 +72,8 @@
                         </div>
                     </div>
                     <!-- /.tabSection -->
+                    <p class="red">High risk level means</p>
+                    <p>High Risk Providers have extra screening requirements. These enrollments should be check with extra care, due to the high risk of fraudulent activity related with these provider types.</p>
                 </div>
             </div>
             <!-- /#mainContent -->
