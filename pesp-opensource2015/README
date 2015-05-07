@@ -1,0 +1,52 @@
+Changes:
+
+1. Updated jpm-persistence-jpa-SNAPSHOT.jar to use the latest 5.3.x version. The previous version has a bug with postgres mapping byte[] to bytea. The jar is built from https://github.com/droolsjbpm/jbpm/tree/5.3.x with the changed files in attached /docs/jbpm-persistence-jpa/.
+
+2. Updated pesp-8.5/db/mpse-clean-setup_postgres.sql to use oid instead of bytea.
+
+3. Removed duplicated log4j jars to avoid the error in loading log4j appenders.
+
+4. Fixed InvocationTargetException in starting jboss.
+
+5. Fixed errors in saving provider type and other functions.
+
+6. Updated DG to include detailed verification for the main workflow.
+
+Details of bug statuses can be found in docs/
+
+----------------------------------------------------------------------------
+
+Notes:
+
+1. http://apps.topcoder.com/forums/?module=Thread&threadID=846939&start=0
+
+Based on http://docs.jboss.org/ejb3/app-server/reference/build/reference/en/html/partial_deployment_descriptors.html and http://docs.jboss.org/ejb3/app-server/reference/build/reference/en/html/jboss_deployment_descriptor.html, we should use jboss.xml for definition of EJB when it uses vendor specific features. In this case, none of those are going to be used so ejb-jar.xml is more proper.
+
+2. http://apps.topcoder.com/forums/?module=Thread&threadID=846936&start=0
+
+ADS asked to use org.hibernate.service.jta.platform.internal.JBossStandAloneJtaPlatform as transaction platform, however this does not work (try the switch and it errors out). the bigger problem is this is an internal class used by jboss, which was not supposed to be used by applications.
+
+----------------------------------------------------------------------------
+
+Warnings that can be safely ignored:
+
+1. There is a warning complaining the EJB Spec is not implemented correctly:
+
+    17:13:52,206 WARN  [Ejb3Configuration] Persistence provider caller does not implement the EJB3 spec correctly. PersistenceUnitInfo.getNewTempClassLoader() is null.
+    17:13:52,206 WARN  [Ejb3Configuration] Overriding hibernate.transaction.factory_class is dangerous, this might break the EJB3 specification implementation
+
+ According to http://community.jboss.org/message/561482#561482, this warning message can be safely ignored and it is simply because of JBoss version is too old.
+
+
+2. There is a warning complaining about InitialContext did not implmenet EventContext:
+
+    2015-02-10 19:05:47,526 WARN  [org.hibernate.impl.SessionFactoryObjectFactory] (main) InitialContext did not implement EventContext
+
+This can be safely ignored based on : https://hibernate.atlassian.net/browse/HHH-6248 and https://issues.jboss.org/browse/JBPAPP-6579
+
+3. There is a warning complaining about EJB3 interceptors:
+
+    2015-02-10 19:05:50,231 WARN  [org.jboss.ejb3.interceptors.aop.InterceptorsFactory] (main) EJBTHREE-1246: Do not use InterceptorsFactory with a ManagedObjectAdvisor, InterceptorRegistry should be used via the bean container
+
+This can be safely ignored based on http://stackoverflow.com/questions/491007/jboss-what-does-the-warning-ejbthree-1246-from-the-interceptorregistry-mean
+
