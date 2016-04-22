@@ -13,7 +13,7 @@ The NASA Center of Excellence for Collaborative Innovation (CoECI) through an In
  
 The application was built using NASA's contract with Harvard Business School in association with the Institute of Quantitative Social Sciences and their subcontract with TopCoder.  The Application Development Challenge was sponsored by CMS as part of the Partnership for Program Integrity Innovation program with the specific intent of developing an application to improve capabilities for streamlining operations and screening providers to reduce fraud and abuse.  
  
-The result and code contained herein is the result of that challenge.  The challenge was comprised of an omnibus of 120 contests launched between June 2012 and April 2013, to cover all phases of the software devleopment life cycle.  More information on the challenge can be found here: http://www.topcoder.com/cms/medicaid-enrollment-portal/
+The result and code contained herein is the result of that challenge.  The challenge was comprised of an omnibus of 120 contests launched between June 2012 and April 2013, to cover all phases of the software development life cycle.  More information on the challenge can be found here: http://www.topcoder.com/cms/medicaid-enrollment-portal/
 
 ---------------------------------------------------------------------
 SECTION 2: Features and Functionality
