@@ -84,7 +84,3 @@ SECTION 3: Licensing
   
   See the License for the specific language governing permissions and
   limitations under the License.
-<<<<<<< HEAD
-
-=======
->>>>>>> Updating minor changes to README
