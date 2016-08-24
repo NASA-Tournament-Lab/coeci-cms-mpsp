@@ -26,21 +26,21 @@ SECTION 2: Features and Functionality
   * Capability to establish and employ a graded screening methodology that escalates the intensity of screening for providers that are flagged as higher risk (i.e., Report Card Methodology)
 2. Capability to Build Provider Profiles
   * Capability to retain screening and enrollment information and results and compare against past and future screening results.
-  * Capability to create a watch list to ensure that providers that are suspected or known to be fraudulent are flagged at the time of screening*
+  * Capability to create a watch list to ensure that providers that are suspected or known to be fraudulent are flagged at the time of screening (partial support in the final product)
   * Capability to track re-enrollment attempts to ensure that slight changes to provider information is not considered a new enrollment
   * Capability to re-screen periodically to ensure that changes in provider profiles are updated on a regular basis
   * Capability to leverage public websites to conduct link analysis through which provider associations could be explored and alerts posted on similar websites could be considered
   * Captures critical attributes.
-    ** Collection of application fees status *
-    ** Exception waiver approved status
-    ** Incorporates enhanced screening data including the results of site visits, criminal background checks and finger printing
-    ** Captures licensing information, financial data and any other data attributes which could impact a risk lever
-    ** Other critical attributes
+     * Collection of application fees status (partial support in the final product)
+     * Exception waiver approved status
+     * Incorporates enhanced screening data including the results of site visits, criminal background checks and finger printing
+     * Captures licensing information, financial data and any other data attributes which could impact a risk lever
+     * Other critical attributes
   * Capability to achieve real time screening, scoring and system outputs (queries/reports)
 3.  Capability to Evaluate and Maintain the Integrity of the Results
   * Capability to persist data sources scores to determine the most reliable source for each data element
   * Capability to evaluate data sources for reliability and accuracy
-  * Capability to create a learning system to ensure that observed negative trends factor back into screening rules so as to flag suspicious enrollments early in the screening process, ensuring the ability to detect and reduce/eliminate the incidence of false positives**
+  * Capability to create a learning system to ensure that observed negative trends factor back into screening rules so as to flag suspicious enrollments early in the screening process, ensuring the ability to detect and reduce/eliminate the incidence of false positives (structural support for this feature is provided, but an active learning system is not deployed with the final application)
   * Capability to create system outputs to assign reasons/explanations to each code or score used
   * Capability to build processes to allow for appropriate interpretation and action on screening and scoring results
   * Capability to ensure that each rule is tested and its impact is evaluated prior to implementing
@@ -50,7 +50,7 @@ SECTION 2: Features and Functionality
   * Capability to verify identity and prior history of problems with Medicaid/CHIP or Medicare programs
   * Identifies and schedules revalidation process
 5.  Meets Architectural Guidelines
-  * Adheres to the Architectural Guidance and meets the seven conditions and standards detailed in the Guidance for Exchange and Medicaid IT Systems, Version 2.0, located at: http://cciio.cms.gov/resources/files/exchange_medicaid_it_guidance_05312011.pdf
+  * Adheres to the Architectural Guidance and meets the seven conditions and standards detailed in the Guidance for Exchange and Medicaid IT Systems, Version 2.0, located at: https://www.medicaid.gov/medicaid-chip-program-information/by-topics/data-and-systems/downloads/exchangemedicaiditguidance.pdf
 6. Integrates Into the MITA Framework / Is MITA Compliant
   * Information regarding MITA can be found at: http://www.cms.gov/MedicaidInfoTechArch/
 7. Accurate, Cost Effective, and Timely
@@ -60,10 +60,6 @@ SECTION 2: Features and Functionality
   * Potential extra costs (e.g. licenses, etc) are documented
   * Effectiveness of the risk-screening model in detecting fraud based issues
   * Technical soundness of risk-scoring in flagging potential fraudulent patterns and tendencies
-
-* Partial support in the final product.
-
-** Structural support for this feature is provided, but an active learning system is not deployed with the final application.
 
 ---------------------------------------------------------------------
 SECTION 3: Licensing
@@ -84,7 +80,4 @@ SECTION 3: Licensing
   
   See the License for the specific language governing permissions and
   limitations under the License.
-<<<<<<< HEAD
 
-=======
->>>>>>> Updating minor changes to README
